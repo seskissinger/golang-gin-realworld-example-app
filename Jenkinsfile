@@ -1,19 +1,19 @@
 pipeline {
     agent any
-
     tools {
-        go 'go'
+        go 'ses' // 'ses' should match exactly with the name you've given to the Go version in Jenkins' Global Tool Configuration
     }
-
     stages {
         stage('Build') {
             steps {
-                sh 'go build -v ./...'
+                // Replace this with your build command
+                sh 'go build'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'go test -v ./...'
+        stage('Test'){
+            steps{
+                // Replace this with your test command
+                sh 'go test'
             }
         }
     }
