@@ -7,13 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Replace this with your build command
-                sh 'go build'
+                sh 'go build ./...'
             }
         }
         stage('Test'){
             steps{
                 // Replace this with your test command
-                sh 'go test'
+                sh 'go test ./...'
             }
         }
     }
